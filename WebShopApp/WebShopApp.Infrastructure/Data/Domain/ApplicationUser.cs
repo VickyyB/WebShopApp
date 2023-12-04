@@ -5,11 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Microsoft.AspNetCore.Identity;
+
 namespace WebShopApp.Infrastructure.Data.Domain
 {
-    public class ApplicationUser
+    public class ApplicationUser:IdentityUser
     {
+        
         [Required]
+
         [MaxLength(30)]
         public string FirstName { get; set; } = null!;
         [Required]
